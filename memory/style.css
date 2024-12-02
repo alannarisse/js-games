@@ -1,0 +1,18 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+main {
+    width:70%;
+  margin:auto;
+}
+#grid {
+  display:grid;
+  grid-template-columns: repeat(3,1fr);
+}
+#grid img {
+  border:1px solid black;
+}
+img {width:100%;}
