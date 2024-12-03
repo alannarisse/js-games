@@ -1,10 +1,49 @@
 * {
   box-sizing: border-box;
 }
+img {width:100%;}
 body {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 main {
-    width:70%;
+    width:600px;
   margin:auto;
+}
+.grid {
+  display:flex;
+  flex-wrap:wrap;
+  gap: 10px;
+  margin-bottom:60px;
+}
+.square {
+  flex:30%;
+  border:2px solid black;
+  height:200px;
+  width:100%;
+}
+.mole {
+  background-image:url('images/mole.png');
+  background-size:cover;
+}
+.two-col {
+  display:flex;
+}
+.two-col div:first-child {
+  flex:2;
+}
+.two-col div:last-child {
+  flex:1;
+    margin-top: 2em;
+}
+button {
+  background:black;
+  border:2px solid black;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 5px;
+}
+button:hover, button:active {
+background:white;
+color: black;
+-webkit-tap-highlight-color: #ccc;
 }

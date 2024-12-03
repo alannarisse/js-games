@@ -8,7 +8,34 @@
 </head>
 <body>
   <main>
-    <h1>Whack-A-Mole</h1>
+    <header class="two-col">
+      <div><h1>Whack-A-Mole</h1>
+      <h2>Score: <span id="score">0</span></h2>
+      <h2>Time Remaining: <span id="time-left">--</span></h2>
+      </div>
+      <div>
+      <h2>Best Score: <span id="best">0</span></h2>
+      <button class="start">Start Game</button>
+      
+      </div>
+    </header>
+    <section class="grid">
+      <div class="square" id="1"></div>
+      <div class="square" id="2"></div>
+      <div class="square" id="3"></div>
+      <div class="square" id="4"></div>
+      <div class="square" id="5"></div>
+      <div class="square" id="6"></div>
+      <div class="square" id="7"></div>
+      <div class="square" id="8"></div>
+      <div class="square" id="9"></div>
+
+    </section>
+    <hr>
+    <h2>Reset your best score back to 0</h2>
+    <p>Be really sure you want to zero out your best all time score before you push this button! Think about all that hard work you put into smashing moles!</p>
+    <button class="clear">Erase Best Score</button>
   </main>
+  <script src="app.js"></script>
 </body>
 </html>
