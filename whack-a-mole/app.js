@@ -82,11 +82,7 @@ function startGame() {
 })
 }
 function playOuch() { 
-
   ouch.play();
-
-
-
 }
 startGame()
 clearBestScore()

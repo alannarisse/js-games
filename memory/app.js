@@ -61,6 +61,7 @@ const cardArray = [
   let cardsChosenIds = []
   let cardsWon = []
   let message = document.querySelector("#message");
+  let yay = document.getElementById("yay");
 
 
 function createBoard() { 
@@ -103,6 +104,7 @@ function checkForMatch() {
     resultDisplay.textContent = cardsWon.length
     if(cardsWon.length === cardArray.length/2) {
       resultDisplay.textContent = 'Congratulations! You found them all!'
+      playYay()
     }
   }
 
@@ -120,7 +122,9 @@ function flipCard() {
     setTimeout(checkForMatch, 500)
    }
 }
-
+function playYay() { 
+  yay.play();
+}
 createBoard()
 
 })
