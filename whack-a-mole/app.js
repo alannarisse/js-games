@@ -9,6 +9,7 @@ const score = document.querySelector('#score')
 const best = document.querySelector('#best')
 best.textContent = localStorage.getItem("best");
 const startGameButton = document.querySelector('.start')
+const startGameMole = document.querySelector('.start-mole')
 const clearBestScoreButton = document.querySelector('.clear')
 let ouch = document.getElementById("ouchId");
 
@@ -22,6 +23,7 @@ function randomSquareGenerator() {
   squares.forEach(square => { 
     square.classList.remove('mole')
     square.classList.remove('hole')
+    square.classList.remove('start-mole')
   })
 
   let randomSquare = squares[Math.floor(Math.random() * 9)]
@@ -73,16 +75,26 @@ function clearBestScore() {
 
 function startGame() { 
   startGameButton.addEventListener('click', (e) => {
+    document.body.classList.remove('start-mole')
     currentTime = 30
     timerId = setInterval(randomSquareGenerator, 700)
     countDownTimerId = setInterval(countDown, 1000)
     countDown()
     startGameButton.style.display = 'none'
-    
+})
+}
+function startGameMoleClick() { 
+  startGameMole.addEventListener('click', (e) => {
+    currentTime = 30
+    timerId = setInterval(randomSquareGenerator, 700)
+    countDownTimerId = setInterval(countDown, 1000)
+    countDown()
+    startGameButton.style.display = 'none'
 })
 }
 function playOuch() { 
   ouch.play();
 }
 startGame()
+startGameMoleClick()
 clearBestScore()
