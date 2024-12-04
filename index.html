@@ -24,8 +24,10 @@
     display:flex;
     align-items: self-end;
     gap:20px;
+    flex-wrap:wrap;
   }
   div {
+    flex:20%;
     text-align:center;
   }
   p.by {margin-top:150px;text-align:center;}
@@ -33,6 +35,7 @@
     main, h1 {
     width:90%;
   }
+  main div{flex:45%;}
 }
   </style>
 </head>
@@ -40,7 +43,8 @@
   <h1>Javascript Games</h1>
   <main>
     
-    <div><a href="rock-paper-scissors/index.html"><img src="rock-paper-scissors/images/scissors.png" alt="">Rock Paper Scissors</a></div>
+        <div><a href="breakout/index.html"><img src="breakout/images/breakout.png" alt="">Breakout</a></div>
+        <div><a href="rock-paper-scissors/index.html"><img src="rock-paper-scissors/images/scissors.png" alt="">Rock Paper Scissors</a></div>
     <div><a href="memory/index.html"><img src="memory/images/hotdog.png" alt="">Memory</a></div>
     <div><a href="whack-a-mole/index.html"><img src="whack-a-mole/images/mole.png" alt="">Whack-a-Mole</a></div>
   </main>

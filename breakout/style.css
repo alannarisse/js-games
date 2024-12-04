@@ -1,0 +1,30 @@
+* {box-sizing: border-box;}
+body {font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}
+.home img {width:60px;}
+.grid {
+  display:grid;
+  width:560px;
+  height:300px;
+  border:1px solid black;
+  position:relative;
+}
+.block {
+  position:absolute;
+  width:100px;
+  height:20px;
+  background-color:blue;
+}
+
+.user {
+  position:absolute;
+  background-color:red;
+  width:100px;
+  height:20px;
+}
+.ball {
+  position:absolute;
+  width:20px;
+  height:20px;
+  border-radius:50%;
+  background-color:black;
+}
