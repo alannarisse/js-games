@@ -4,17 +4,81 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rock Paper Scissors</title>
+  <style>
+
+    * {
+      box-sizing: border-box;
+    }
+    span {padding-left:10px;}
+    h2 {
+      font-size:24px;
+      display:flex;
+      align-items: center;
+      height:60px;
+      margin:0;
+    }
+    p {margin:0 0 20px 0;}
+    main {
+      width:90%;
+      margin:auto;
+    }
+    body {
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+  img.small{width:60px; height:60px;}
+  button:hover {
+    border-color:red;
+  }
+  #rock { 
+    background-image: url('images/rock.png'); 
+    background-size:cover;
+  }
+  #paper { 
+    background-image: url('images/paper.png'); 
+    background-size:cover;
+  }
+  button {
+    background:none;
+    color: red;
+    font-weight:bold;
+    font-size:20px;
+    margin:10px;
+    width:200px; 
+    height:200px;
+  }
+  .buttons {
+    display:flex;
+  }
+  #scissors { 
+
+    background-image: url('images/scissors.png'); 
+    background-size:cover;
+  }
+  .home img {width:60px;}
+  @media screen and (max-width: 768px) {
+
+  button {
+    width:100px; 
+    height:100px;
+  }
+}
+  </style>
 </head>
 <body>
-<h2>Computer Choice: <span id="computer-choice"></span></h2>
-<h2>Your Choice: <span id="user-choice"></span></h2>
-<h2>Result: <span id="results"></span></h2>
+<div class="home"><a href="../index.html"><img src="../home.png"></a></div>
 
-<button id="rock">rock</button>
-<button id="paper">paper</button>
-<button id="scissors">scissors</button>
-
-
+  <main>
+    <h1>Rock, Paper, Scissors!</h1>
+    <p>Click on an image to choose your weapon!</p>
+    <h2>Computer Choice: <span id="computer-choice"></span></h2>
+    <h2>Your Choice: <span id="user-choice"></span></h2>
+    <h2>Result: <span id="results"></span></h2>
+    <div class="buttons">
+      <button id="rock">Rock</button>
+      <button id="paper">paper</button>
+      <button id="scissors">scissors</button>
+    </div>
+  </main>
   <script src="app.js"></script>
 </body>
 </html>

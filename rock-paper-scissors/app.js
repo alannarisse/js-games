@@ -3,11 +3,13 @@ const userChoiceDisplay = document.getElementById('user-choice')
 const resultDisplay = document.getElementById('results')
 const possibleChoices = document.querySelectorAll('button')
 let userChoice
+let computerChoiceImg
 let result
 
 possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click', (e) => {
   userChoice = e.target.id
-  userChoiceDisplay.innerHTML = userChoice
+  userChoiceImg = "<img src='images/" + e.target.id + ".png' class='small'>"
+  userChoiceDisplay.innerHTML = userChoiceImg
   generateComputerChoice()
   getResult()
 }))
@@ -24,30 +26,30 @@ function generateComputerChoice() {
   if (randomNumber === 3) { 
     computerChoice = 'scissors'
   }
-  computerChoiceDisplay.innerHTML = computerChoice
+  computerChoiceImg = `<img class="small" src="images/${computerChoice}.png">`
+  computerChoiceDisplay.innerHTML = computerChoiceImg
 }
 
 function getResult() { 
   if (computerChoice === userChoice) { 
-    result = "its a draw"
+    result = "It\'s a draw"
   }
-  if (computerChoice === 'rock' && userChoice === 'paper') { 
-    result = "you win"
+  if (
+    computerChoice === 'rock' && userChoice === 'paper' ||
+    computerChoice === 'paper' && userChoice === 'scissors' ||
+    computerChoice === 'scissors' && userChoice === 'rock'
+  )
+  { 
+    result = "You win!"
   }
-  if (computerChoice === 'rock' && userChoice === 'scissors') { 
-    result = "you lost"
-    }
-  if (computerChoice === 'paper' && userChoice === 'scissors') { 
-    result = "you win"
+  if (
+    computerChoice === 'rock' && userChoice === 'scissors' ||
+    computerChoice === 'paper' && userChoice === 'rock' ||
+    computerChoice === 'scissors' && userChoice === 'paper'
+  )
+  { 
+    result = "You lose :("
   }
-    if (computerChoice === 'paper' && userChoice === 'rock') { 
-    result = "you lost"
-  }  
-    if (computerChoice === 'scissors' && userChoice === 'rock') { 
-    result = "you win"
-  }  
-    if (computerChoice === 'scissors' && userChoice === 'paper') { 
-    result = "you lost"
-  }  
+
   resultDisplay.innerHTML = result
 }

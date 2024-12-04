@@ -6,10 +6,15 @@ body {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 main {
-    width:600px;
+  width:85%;
   margin:auto;
+  display:flex;
+  gap:20px;
 }
+
 .grid {
+  width:600px;
+  min-width:600px;
   display:flex;
   flex-wrap:wrap;
   gap: 10px;
@@ -23,6 +28,10 @@ main {
 }
 .mole {
   background-image:url('images/mole.png');
+  background-size:cover;
+}
+.hole {
+  background-image:url('images/hole.png');
   background-size:cover;
 }
 .two-col {
@@ -46,4 +55,33 @@ button:hover, button:active {
 background:white;
 color: black;
 -webkit-tap-highlight-color: #ccc;
+}
+.home {width:60px;}
+
+@media screen and (max-width: 1024px) {
+  main {
+    width:95%;
+    flex-direction: column;
+  }
+  h1 {font-size:24px;}
+  h2 {font-size:16px;}
+  p.warn{font-size:11px;}
+  button{font-size:14px;}
+}
+@media screen and (max-width: 768px) {
+  .grid {
+    width:400px;
+    min-width:400px;
+    display:flex;
+    flex-wrap:wrap;
+    gap: 10px;
+    margin-bottom:60px;
+  }
+  .square {
+    flex:30%;
+    border:2px solid black;
+    height:120px;
+    width:100%;
+  }
+
 }

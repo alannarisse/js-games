@@ -7,8 +7,11 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+      <div class="home"><a href="../index.html"><img src="../home.png"></a></div>
+
   <main>
-    <header class="two-col">
+
+    <header>
       <div><h1>Whack-A-Mole</h1>
       <h2>Score: <span id="score">0</span></h2>
       <h2>Time Remaining: <span id="time-left">--</span></h2>
@@ -16,26 +19,31 @@
       <div>
       <h2>Best Score: <span id="best">0</span></h2>
       <button class="start">Start Game</button>
-      
+      <p class="announce"></p>
       </div>
     </header>
     <section class="grid">
-      <div class="square" id="1"></div>
-      <div class="square" id="2"></div>
-      <div class="square" id="3"></div>
-      <div class="square" id="4"></div>
-      <div class="square" id="5"></div>
-      <div class="square" id="6"></div>
-      <div class="square" id="7"></div>
-      <div class="square" id="8"></div>
-      <div class="square" id="9"></div>
-
-    </section>
-    <hr>
+      <div class="square hole" id="1"></div>
+      <div class="square hole" id="2"></div>
+      <div class="square hole" id="3"></div>
+      <div class="square hole" id="4"></div>
+      <div class="square mole" id="5"></div>
+      <div class="square hole" id="6"></div>
+      <div class="square hole" id="7"></div>
+      <div class="square hole" id="8"></div>
+      <div class="square hole" id="9"></div>
+<div class="bottom">
+    <br><br>
     <h2>Reset your best score back to 0</h2>
-    <p>Be really sure you want to zero out your best all time score before you push this button! Think about all that hard work you put into smashing moles!</p>
+    <p class="warn">Be really sure you want to zero out your best all time score before you push this button! Think about all that hard work you put into smashing moles!</p>
     <button class="clear">Erase Best Score</button>
+  </div>
+    </section>
   </main>
+  <audio id="ouchId">
+  <source src="ouch.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
   <script src="app.js"></script>
 </body>
 </html>
