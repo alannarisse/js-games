@@ -23,7 +23,6 @@ function randomSquareGenerator() {
   squares.forEach(square => { 
     square.classList.remove('mole')
     square.classList.remove('hole')
-    square.classList.remove('start-mole')
   })
 
   let randomSquare = squares[Math.floor(Math.random() * 9)]
