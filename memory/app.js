@@ -53,8 +53,8 @@ const cardArray = [
 ]
   
   cardArray.sort(() => 0.5 - Math.random())
-  let totalPts = document.querySelector('#total')
-  totalPts.textContent = cardArray.length/2
+  //let totalPts = document.querySelector('#total')
+  //totalPts.textContent = cardArray.length/2
   const gridDisplay = document.querySelector('#grid')
   const resultDisplay = document.querySelector('#result')
   let cardsChosen = []
